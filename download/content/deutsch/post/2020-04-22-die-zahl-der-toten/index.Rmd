@@ -125,7 +125,7 @@ Um die Zahl der Toten einordnen zu können, benötigen wir eine Statistik, die a
 
 </br>
 <center>
-![Todesfälle 2020](todesfaelle.png)
+![Todesfälle 2020](gd-d-14.03.04.03-wr-computed_thumbnail.png)
 </center>
 </br>
 Erfasst werden alle Todesfälle beim zuständigen Zivilstandsamt von Schweizern mit Wohnsitz in der Schweiz. Neben dem Peak im April ist auch der Verlauf im Januar und Februar auffällig. Anfangs Jahr werden weniger Todesfälle als erwartet an das BFS gemeldet.
