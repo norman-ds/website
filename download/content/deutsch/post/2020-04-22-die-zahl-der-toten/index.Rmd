@@ -67,6 +67,7 @@ Viele berichteten im März und April 2020 über Methoden, die helfen eine Pandem
 
 In einem **SEIR**-Modell müssen einige Daten zur Validierung vorhanden sein, beispielsweise zum Zustand *Exposed*, was Viruskontaktohne Symptome bedeutet. Gerade dieser Zustand zeigt, wie schwierig es ist an solche Daten zu kommen. Da dürfte ein gutes Design für Stichproben weiter helfen.
 
+<div class='imageCont'>
 ```{r echo=TRUE}
 if (!require('DiagrammeR')) install.packages('DiagrammeR')
 
@@ -83,12 +84,13 @@ DiagrammeR::grViz("digraph {
   rec1 -> rec2 -> rec3 -> rec4
   }", 
   height = 100)
-
 ```
+</div>
 *Source: https://www.idmod.org/docs/hiv/model-sir.html*
 
 Das SEIR-Modell alleine genügt noch nicht, denn nicht alle erholen sich von selbst. Viele Erkrankte müssen hospitalisiert werden und einige sterben dennoch.
 
+<div class='imageCont'>
 ```{r echo=FALSE}
 
 DiagrammeR::grViz("digraph {
@@ -105,8 +107,8 @@ DiagrammeR::grViz("digraph {
   rec2 -> rec4
   }", 
   height = 100)
-
 ```
+</div>
 
 In zwischen wissen wir, dass hauptsächlich ältere Menschen mit einem COVID-19 Infekt sterben können. Aber gerade im zunehmenden Alter können Mehrfacherkrankungen auftreten. Da die Zahl der Toten eine relativ zuverlässige Datenquelle darstellt, stellt sich die Frage, ob eine grundsätzliche Zunahme in der Todesfallstatistik erkennbar ist?
 

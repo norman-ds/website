@@ -65,6 +65,7 @@ type: ''
 <li>Prof.Dr.Tanja Stadler, ETH Zürich, Department of Biosystems Science and Engineering, last update 21.April 2020, COVID-19 Pandemic and Monitoring spread in Switzerland, Verfügbar unter: <a href="https://bsse.ethz.ch/cevo/research/sars-cov-2.html" class="uri">https://bsse.ethz.ch/cevo/research/sars-cov-2.html</a></li>
 </ul>
 <p>In einem <strong>SEIR</strong>-Modell müssen einige Daten zur Validierung vorhanden sein, beispielsweise zum Zustand <em>Exposed</em>, was Viruskontaktohne Symptome bedeutet. Gerade dieser Zustand zeigt, wie schwierig es ist an solche Daten zu kommen. Da dürfte ein gutes Design für Stichproben weiter helfen.</p>
+<div class="imageCont">
 <pre class="r"><code>if (!require(&#39;DiagrammeR&#39;)) install.packages(&#39;DiagrammeR&#39;)
 ## Loading required package: DiagrammeR
 
@@ -81,12 +82,15 @@ DiagrammeR::grViz(&quot;digraph {
   rec1 -&gt; rec2 -&gt; rec3 -&gt; rec4
   }&quot;, 
   height = 100)</code></pre>
-<p><div id="htmlwidget-1" style="width:672px;height:100px;" class="grViz html-widget"></div>
+<div id="htmlwidget-1" style="width:672px;height:100px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = LR]\n  \n  node [shape = oval]        \n  rec1 [label = \"Susceptible\"]\n  rec2 [label = \"Exposed\"]\n  rec3 [label = \"Infectious\"]\n  rec4 [label =  \"Recovered\"]\n\n  # edge definitions with the node IDs\n  rec1 -> rec2 -> rec3 -> rec4\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
-<em>Source: <a href="https://www.idmod.org/docs/hiv/model-sir.html" class="uri">https://www.idmod.org/docs/hiv/model-sir.html</a></em></p>
+</div>
+<p><em>Source: <a href="https://www.idmod.org/docs/hiv/model-sir.html" class="uri">https://www.idmod.org/docs/hiv/model-sir.html</a></em></p>
 <p>Das SEIR-Modell alleine genügt noch nicht, denn nicht alle erholen sich von selbst. Viele Erkrankte müssen hospitalisiert werden und einige sterben dennoch.</p>
+<div class="imageCont">
 <div id="htmlwidget-2" style="width:672px;height:100px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"digraph {\n  graph [layout = dot, rankdir = LR]\n  \n  node [shape = oval]        \n  rec1 [label = \"Infectious\"]\n  rec2 [label = \"Hospitalized\"]\n  rec3 [label = \"Dead\"]\n  rec4 [label =  \"Recovered\"]\n\n  # edge definitions with the node IDs\n  rec1 -> rec2 -> rec3\n  rec2 -> rec4\n  }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
 <p>In zwischen wissen wir, dass hauptsächlich ältere Menschen mit einem COVID-19 Infekt sterben können. Aber gerade im zunehmenden Alter können Mehrfacherkrankungen auftreten. Da die Zahl der Toten eine relativ zuverlässige Datenquelle darstellt, stellt sich die Frage, ob eine grundsätzliche Zunahme in der Todesfallstatistik erkennbar ist?</p>
 </div>
 <div id="daten" class="section level2">
