@@ -1,0 +1,12 @@
+---
+title: "Herzlichen Danke"
+type: "thanks"
+# slug: "thanks"
+translationKey: "thanks"
+---
+
+Danke für Ihr Interesse an Dienstleistungen von puntaminar gmbh. Ich werde mein bestes geben und mich schnellst möglich bei Ihnen melden.
+
+```{r echo=FALSE}
+#blogdown::shortcode('tweet', '1101468272036319233')
+```

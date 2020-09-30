@@ -1,0 +1,43 @@
+
+  <div class='footer__content'>
+    <div class="footer-buttons">
+      {{ partial "social-icons.html" .}}
+    </div>
+  </div>
+
+  <div class='footer-more'>
+    <a href="{{ "about/" | relLangURL }}">About</a>
+    <a href="{{ "contact/" | relLangURL }}">Contact</a>
+    <a href="{{ "imprint/" | relLangURL }}">Imprint</a>
+    <a href="{{ "privacy/" | relLangURL }}">Privacy</a>
+  </div>
+
+  <div class='credits'>
+    <div class='credits-people'>
+      <p>Themes by <a href='http://amber.rbind.io'>Amber Thomas</a>  +  Modified by 
+      <a href='https://puntaminar.ch'>Norman Bieri</a>. 
+      <p>This website is created with blogdown package by 
+      <a href='https://bookdown.org/yihui/blogdown'>Yihui Xie</a>
+    </div>
+    <div class='credits-location'>
+      <p >Crafted with Swiss {{ partial "icon.html" "heart" }} in Wila</p>
+    </div>
+  </div>
+
+
+
+{{ if $.Scratch.Get "highlight_enabled" }}
+  {{ $highVer := .Site.Params.highlightjsVersion }}
+  {{ $highCDN := (.Site.Params.highlightjsCDN | default "//cdn.bootcss.com")}}
+  {{ $highLang := .Site.Params.highlightjsLang }}
+  <script src="https:{{ $highCDN }}/highlight.js/{{ $highVer }}/highlight.min.js"></script>
+  {{ range .Site.Params.highlightjsLang }}
+    <script src="https:{{ $highCDN }}/highlight.js/{{ $highVer }}/languages/{{ . }}.min.js"></script>
+  {{ end }}
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+{{ end }}
+
+
+  <script src="{{ "js/theme.js" | absURL }}"></script>

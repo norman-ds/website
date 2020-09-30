@@ -1,0 +1,12 @@
+---
+title: "Privacy Policy"
+type: "privacy"
+# slug: "privacy"
+translationKey: "privacy"
+---
+
+
+This privacy policy will explain how I handle the anonymized personal data I collect from you when you use my website.
+
+Please consult the German text [here](/de/privacy). For translation into any language are many web services available - such as Google Translate, DeepL etc.
+

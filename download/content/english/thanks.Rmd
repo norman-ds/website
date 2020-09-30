@@ -1,0 +1,12 @@
+---
+title: "Thank you"
+type: "thanks"
+# slug: "thanks"
+translationKey: "thanks"
+---
+
+Thank you for your interest in services of puntaminar gmbh. I will do my best and contact you as soon as possible.
+
+```{r echo=FALSE}
+#blogdown::shortcode('tweet', '1101468272036319233')
+```

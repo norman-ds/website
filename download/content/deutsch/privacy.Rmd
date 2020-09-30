@@ -1,0 +1,44 @@
+---
+title: "Datenschutzerklärung"
+type: "privacy"
+# slug: "privacy"
+translationKey: "privacy"
+---
+
+
+Wir freuen uns über Ihren Besuch auf unserer Website. Nachfolgend informieren wir Sie darüber, welche personenbezogenen Daten wir erheben und wie wir diese zu welchen Zwecken verarbeiten.
+
+### Informationen zum Datenschutz für Webseite Besucher
+
+1. Verantwortlicher
+
+Die Gesellschaft puntaminar gmbH, Höhenstrasse 27, 8492 Wila, info@puntaminar.ch, +41 77 469 29 73 ist für Ihre Daten verantwortlich.
+
+2. Zweck der Datenverarbeitung und Rechtsgrundlagen
+
+  * Besuch der Website
+  * Nutzung unseres Kontaktformulars
+
+3. Weitergabe von personenbezogenen Daten
+
+...
+
+4. Cookies und Tracking Technologien
+
+...
+
+5. Social Plug-Ins
+
+...
+
+6. Betroffenenrechte
+
+...
+
+7. Datensicherheit
+
+...
+
+8. Aktualität und Änderung dieser Datenschutzerklärung
+
+Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juli 2020. Durch die Weiterentwicklung unserer Website und Angebote darüber oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Daher empfehlen wir, diese Datenschutzerklärung in regelmäßigen Abständen zu prüfen.

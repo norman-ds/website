@@ -1,0 +1,14 @@
+{{ $siteLanguages := site.Languages}}
+{{ $pageLang := .Page.Lang}}
+{{- range .Page.AllTranslations }}
+    {{ $translation := . }}
+    {{- range sort $siteLanguages "Weight" "asc" }}
+        {{- if eq $translation.Lang .Lang }}
+            {{ if eq $pageLang .Lang}}
+                <a class="flagselect" href="{{ $translation.Permalink | relURL }}" aria-label="{{ i18n "ariaTranslation" }}{{ .Params.LanguageName }}">{{ .Params.languageName }}</a>
+            {{ else }}
+                <a class="flagnoselect" href="{{ $translation.Permalink | relURL }}" aria-label="{{ i18n "ariaTranslation" }}{{ .Params.LanguageName }}">{{ .Params.languageName }} version</a>
+            {{ end }}
+        {{- end }}
+    {{- end }}
+{{- end }}

@@ -1,0 +1,80 @@
+baseurl = "https://web007.netlify.app/"
+languageCode = "de"
+title = "A puntaminar portfolio & blog"
+theme = "data-science"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+enableEmoji = true
+# allow search engines to search/crawl everything
+enableRobotsTXT = true
+defaultContentLanguageInSubdir = true
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[taxonomies]
+#  author = "authors"
+  tag = "tags"
+  category = "categories"
+
+[params]
+  author = "Norman Bieri"
+  description = "A collection of my data science projects and blog posts about R and everything before and after."
+  twitterAuthor = "@bierinorman"
+  twitterSite = "@bierinorman"
+  images = ['logo.jpg']
+
+  # options for highlight.js (version, additional languages, and theme)
+  highlight = true
+  highlightjsVersion = "9.15.6"
+  highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+  highlightjsLang = ["r", "yaml", "javascript"]
+  custom = true
+  highlightjsThemeLight = ""
+  highlightjsThemeDark = ""
+
+  # path to the favicon, under "static"
+  favicon = "favicon.ico"
+
+[params.logo]
+  url = "logo.png"
+  width = 50
+  height = 50
+  alt = "Logo"
+
+[params.social]
+  email = "mailto:info@puntaminar.ch"
+  twitter = "https://twitter.com/bierinorman"
+  github = "https://www.github.com/norman-ds"
+  linkedin = "https://www.linkedin.com/in/profilbieri"
+  stackoverflow = ""
+  facebook = ""
+  instagram = ""
+  dribbble = ""
+  kaggle = ""
+  medium = ""
+  patreon = ""
+  pinterest = ""
+  youtube = ""
+  
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageNameShort = "en"
+    languageFlag = "🇬🇧"
+    contentDir = "content/english"
+    weight = 1
+    [languages.en.params]
+      introsub = "I am a data lover ... trustworthy, reproducible and data without any misunderstandings"
+      intromore = "Senior Engineer and Founder of"
+  [languages.de]
+    languageName = "Deutsch"
+    languageNameShort = "de"
+    languageFlag = "🇩🇪"
+    contentDir = "content/deutsch"
+    weight = 2
+    [languages.de.params]
+      introsub = "Ich vertraue gerne auf Daten, die reproduzierbar sind und zum Verständnis beitragen"
+      intromore = "Senior Engineer und Gründer von"
+

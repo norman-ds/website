@@ -1,0 +1,78 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file  -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Blogdown website
+
+A github/blogdown website with hugo
+
+<!-- badges: start -->
+![Render2README](https://github.com/norman-ds/website/workflows/Render2README/badge.svg)
+<!-- badges: end -->
+
+## DevOps
+
+This project follows a continuous process approach covering software development and IT operations. All scripts are written in [R](https://www.r-project.org). The [Docker](https://hub.docker.com/r/rocker/verse) container system is used for reproducible software development. The versioning system is [GitHub](https://help.github.com/en/actions/building-and-testing-code-with-continuous-integration), GitHub *Action* for CI/CD and [Netlify](https://www.netlify.com) as Webserver.
+
+
+The RStudio IDE is launched in a docker and accessed via the browser (http://localhost:8787).
+
+```
+docker run --name website -d -p 8787:8787 -v $(pwd):/home/rstudio -e PASSWORD=pwd rocker/verse:3.6.3
+```
+
+Next we need to install the blogdown package in R and the static site generator Hugo (https://gohugo.io) version *0.74.3*.
+
+```
+install.packages('blogdown')
+blogdown::install_hugo(version="0.74.3")
+```
+
+To use the theme *data-science* from [Amber Thomas](https://github.com/ProQuestionAsker/websiteSource), you'll need to download all the files in that directory with *svn*, since *git* won't work for this target. Be careful with the hugo version, since it was written for an older version *0.54.0*.
+
+```
+svn export https://github.com/ProQuestionAsker/websiteSource/trunk/themes/data-science 
+
+# the static files too
+svn export https://github.com/ProQuestionAsker/websiteSource/trunk/static
+```
+
+The docker image of *rocker/verse* has the R version 3.6.3 and some packages installed and saves us from having to install them again.
+
+```{R}
+sessionInfo()
+```
+
+The following is a list of the few packages used (with version) ...
+
+```{R}
+libs <- c("blogdown")
+ip <- installed.packages(fields = c("Package", "Version"))
+ip <- as.data.frame(ip)
+ip <- ip[ip[,c("Package")] %in% libs,]
+paste(ip[,c("Package")],ip[,c("Version")])
+```
+
+... and the hugo version
+
+```{r}
+blogdown::hugo_version()
+```
+
+
+## Local Testing
+
+Since Rstudio runs in a container a simple extra web server is used for testing static websites. To start from terminal a HTTPServer go to the directory *public* and type:
+
+```
+python -m SimpleHTTPServer 8000
+```

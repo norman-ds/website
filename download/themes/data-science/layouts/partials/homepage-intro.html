@@ -1,0 +1,37 @@
+<section class="intro">
+  <div class='intro-container'>
+
+    <img class='introImage' src="{{ "/images/introImage-light.png" | absURL }}">
+
+    <div class="intro-content">
+
+      <div class="intro-welcome">
+        <h1 class='name'>{{ .Param "author" }}</h1>
+      </div>
+
+      <div class="intro-sub">
+        <p>{{ .Param "introsub" }}</p>
+      </div>
+
+      <div class="intro-more">
+        <p>{{ .Param "intromore" }} 
+        <a href='https://puntaminar.ch'>puntaminar gmbh</a>
+        </p>
+        
+        <div class="intro-buttons">
+          {{ partial "social-icons.html" .}}
+        </div>
+        
+        <div class="lang-toggel">
+          {{ partial "language-switcher.html" .}}
+        </div>
+      </div>
+
+      <div class='intro-social'>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+<main class='contact'>
+  <div class='post-background'>
+    <div class='post-gradient'></div>
+    {{ partial "simple-nav.html" . }}
+
+  </div>
+
+  <article class="article">
+
+    <section class="post__info">
+
+      <h1 class="post__title">{{ .Title }}</h1>
+
+    </section>
+
+    <section class="post__content">
+      {{ .Content }}
+    </section>
+
+    <div class='contact-form'>
+      
+{{/* Add a forms service from formsubmit */}}
+
+    <form action="https://formsubmit.co/a78f1813b415353de93e6ca36a6163b6" method="POST">
+      <div class='contact-form-wrap'>
+        <input class="contact-name" type="text" name="name" placeholder="Your Full Name" required><br>
+        <input class="contact-email" type="email" name="email" placeholder="Your Email Address" required><br>
+        <textarea rows="4" name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send" name="submit" class="contact-btn btn-primary btn-outline">
+      </div>
+      <input type="hidden" name="_subject" value="Website message">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value='{{ "thanks/" | absLangURL }}' /> 
+    </form>
+
+
+</main>
+<footer class='footer__single'>
+  {{ partial "footer.html" . }}
+</footer>

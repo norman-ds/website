@@ -1,0 +1,20 @@
+---
+title: "Impressum"
+type: "impressum"
+# slug: "impressum"
+translationKey: "impressum"
+---
+
+### Kontaktadresse
+
+puntaminar GmbH  
+Höhenstrass 27  
+8492 Wila  
+Schweiz  
+mailto:info@puntaminar.ch  
+
+### Handelsregistereintrag
+Eingetragener Firmenname: puntaminar gmbH  
+Handelsregisteramt: Zürich  
+Nummer: CHE-451.343.375    
+
