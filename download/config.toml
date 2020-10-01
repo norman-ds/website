@@ -59,22 +59,22 @@ defaultContentLanguageInSubdir = true
   youtube = ""
   
 [languages]
-  [languages.en]
-    languageName = "English"
-    languageNameShort = "en"
-    languageFlag = "🇬🇧"
-    contentDir = "content/english"
-    weight = 1
-    [languages.en.params]
-      introsub = "I am a data lover ... trustworthy, reproducible and data without any misunderstandings"
-      intromore = "Senior Engineer and Founder of"
   [languages.de]
     languageName = "Deutsch"
     languageNameShort = "de"
     languageFlag = "🇩🇪"
     contentDir = "content/deutsch"
-    weight = 2
+    weight = 1
     [languages.de.params]
       introsub = "Ich vertraue gerne auf Daten, die reproduzierbar sind und zum Verständnis beitragen"
       intromore = "Senior Engineer und Gründer von"
+  [languages.en]
+    languageName = "English"
+    languageNameShort = "en"
+    languageFlag = "🇬🇧"
+    contentDir = "content/english"
+    weight = 2
+    [languages.en.params]
+      introsub = "I am a data lover ... trustworthy, reproducible and data without any misunderstandings"
+      intromore = "Senior Engineer and Founder of"
 

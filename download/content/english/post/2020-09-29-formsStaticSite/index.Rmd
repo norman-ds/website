@@ -18,7 +18,43 @@ imageAlt: 'Hands resting on MacBook keyboard'
 imageCredit: 'Crew'
 imageCreditLink: 'https://unsplash.com/photos/4Hg8LH9Hoxc'
 type: ''
-draft: 'true'
+draft: 'false'
 ---
 
-A website to get in contact is always useful if you want to bring services to the market. There are several options available for this purpose, which are partly dependent on whether you operate a static or dynamic website.
+A website is helpful if you want to bring services to the market. There are several options available for building an interface over that customers can contact you. The procedure depends on whether you run a static or dynamic website.
+
+You can still use links in html-files like *mailto:, tel:, skype:, sip:* e.t.c., but with a contact form some additional features are possible. However, forms require a backend that could handle the form submissions, and static websites do not have this backend. This is the reason why you have a static and not dynamic website. You do not need to worry about the backend.
+
+In that case, we could use a service that would do this for us. [There are many services on the internet](https://serverless.css-tricks.com/services/forms/). Of course we can create our own web service, for example with php, and that should not be a big deal.
+
+First we going to list the provided features and say how important they are for us.
+
+** Front Office **
+
+  * eMail, messanger (whatsapp, slack e.g.)
+  * Branding and white labeling
+  * single or multi-step form
+  * Rules for showing different content
+  * Validation rules
+  * Custom redirects
+  * Size limitations
+  * Javascript, or not
+  * Datenschutz-Grundverordnung DSGVO
+  
+** Back Office **
+
+  * Spam protection
+  * Dashboard
+  * Analytics
+  * Testing mode
+  * Data export
+  * API access
+  * Interaction between APP's (Webhook, Zapier)
+  * Saving development time and costs
+
+** Pricing **
+
+.. from free to what ever your business needs !
+
+> ... i will continue writing on this post soon !
+
