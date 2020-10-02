@@ -17,6 +17,8 @@ image: 'laptop.jpg'
 imageAlt: 'Hands resting on MacBook keyboard'
 imageCredit: 'Crew'
 imageCreditLink: 'https://unsplash.com/photos/4Hg8LH9Hoxc'
+imageSrc: 'Unsplash'
+imageSrcLink: 'https://unsplash.com'
 type: ''
 draft: 'false'
 ---
