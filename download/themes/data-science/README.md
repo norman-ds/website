@@ -28,19 +28,17 @@ blogdown::new_site(theme = '...')
 
 ## Changes
 
-The main changes I made to the original hugo-lithium-theme are:
-
-1. Added support for [MathJax](https://bookdown.org/yihui/blogdown/output-format.html) (for rendering LaTeX math expressions) and highlight.js (for syntax highlighting).
-
-    - For both libraries, you can specify the CDN host (e.g., CloudFlare, BootCDN, ...).
-
-    - For highlight.js, you can specify additional languages (e.g., `r`, `yaml`, `tex`, ...).
+The main changes I made to the original data-science-theme are:
 
 1. Added Google web fonts (embedded in the theme so that visitors from countries where Google is banned can still see the typefaces).
 
-1. Improved Hugo's built-in Disqus template, so that you can actually view the comments even when you are previewing the website locally.
+1. Modiefied contact form. 
 
 1. Replaced the variable `.Permalink` with `.RelPermalink`, and function `absURL` with `relURL` where necessary. It is a bad idea to use full absolute links (with the protocol and domain) in general. For example, `.Permalink` and `absURL` may generate URLs of the form `http://www.example.com/foo/bar.html`, but `/foo/bar.html` is more portable.
+
+1. Added support for posts in german as a second language.
+
+1. Modiefied contact form (embedded in the layout the form provider https://formsubmit.co). But at the moment, the safest application is still in progress!
 
 ## License
 
