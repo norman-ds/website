@@ -1,0 +1,165 @@
+---
+title: Bau in Etappen
+writers: 
+  - owner: "Norman Bieri"
+    twitter: "bierinorman"
+    photo: "https://pbs.twimg.com/profile_images/1301085742064599041/QgufA9ab_400x400.jpg"
+date: '2017-12-20'
+slug: spitalbau
+categories:
+  - Project
+tags:
+  - Spital
+  - Planung
+  - R
+  - Excel
+editor_options:
+  chunk_output_type: console
+description: 'Datengestützte Methodik in der Planung für Spital - Ersatzneubau.'
+thumbnail: 'thumbnail.jpg'
+image: 'neubau.jpg'
+imageAlt: 'Arbeiter auf der Baustelle mit vorbereitetem Fundament im Hintergrund'
+imageCredit: 'Scott Blake'
+imageCreditLink: 'https://unsplash.com/@sunburned_surveyor'
+imageSrc: 'Unsplash'
+imageSrcLink: 'https://unsplash.com'
+type: ''
+draft: true
+---
+
+
+
+<style>
+.tabCont{overflow-x:auto;}
+table {
+  width: 100%;
+}
+th {
+  height: 50px;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+</style>
+<ul>
+<li><a href="#einleitung">Einleitung</a></li>
+<li><a href="#datengestützte-methodik">Datengestützte Methodik</a></li>
+<li><a href="#offerten-der-architekten">Offerten der Architekten</a></li>
+</ul>
+<div id="einleitung" class="section level2">
+<h2>Einleitung</h2>
+<p>Von der Vision zum Vergleich der Offerten der Architekten.</p>
+<p>Ein übliches Vorgehen ist aufgrund einer Vision eine Machbarkeitsstudie zu erstellt. Darin sind viele Annahmen zur Marktentwicklung und allgemeinen Trends berücksichtigt. Meistens wird hierfür ein externes Beratungsunternehmen mit viel Erfahrung beauftragt.</p>
+<div class="figure"><span id="fig:fig-1"></span>
+<img src="machbarkeitsstudie.png" alt="Auszug aus einer Machbarkeitsstudie" width="80%" />
+<p class="caption">
+Figure 1: Auszug aus einer Machbarkeitsstudie
+</p>
+</div>
+<p>Um schlussendlich Offerten der Architekten vergleichen zu können sind zwingend konkrete Vorgaben über den Ersatzneubau zu machen. Diese lassen sich überprüfen aus Daten der Machbarkeitsstudie, internen Abläufe, anerkannten Kennzahlen und Normen.</p>
+</div>
+<div id="datengestützte-methodik" class="section level2">
+<h2>Datengestützte Methodik</h2>
+<p>Die Machbarkeitsstudie bildet üblicherweise Leistungen der letzten Jahre ab und mittels Hochrechnung werden Anzahl Betten und Räume berechnet. Dabei ist für die Neubauplanung wichtig, dass die Räume und Infrastruktur den zukünftigen Prozessen genügen. Ein Rückblick alleine ist nicht zielführend.</p>
+<p>Etwas aufwändig aber sehr wirkungsvoll ist, wenn jeder erbrachten Leistung Räume und wichtige Infrastrukturen zugeteilt werden. Teilweise ist auch Personal aus mehreren Fachabteilungen für eine Leistung zwingend (Einsatzplan, Raumbelegungen usw.). Daraus kann sich eine recht komplexe Struktur ergeben, wobei die IST-Situation mit Hinblick auf den Neubau zu überdenken ist.</p>
+<p>Um mit standardisierten Räumen auch bei einem Ersatzneubau in Etappen Erfolg zu haben, ist vorab an jede nächste Etappe zudenken. Das Unternehmen will beispielsweise zwei standardisierte Wartezimmergrössen in der Neubauplanung haben, doch für das Bestimmen der Flächen sind alle Etappen zu berücksichtigen.</p>
+<div class="figure"><span id="fig:fig-2"></span>
+<img src="raumpfad.png" alt="Häufigkeiten der Raumbenutzung" width="100%" />
+<p class="caption">
+Figure 2: Häufigkeiten der Raumbenutzung
+</p>
+</div>
+<p>Die vielen Daten lassen sich zu Prozessen verknüpfen und visualisieren. Beispielsweise zeigt eine Raumpfadanalyse die Häufigkeiten über Kombinationen der Raumbenutzung. Daraus ergeben sich Hinweise zur optimalen Distanz zwischen den Räumen. Auch zur Frage nach der Anzahl und ob grundsätzlich multifunktionale Räumen vermehrt gebaut werden sollten. Für Prozessanalysen und Visualisierungen sollte eine Statistiksoftware wie <a href="https://www.r-project.org">R</a> verwendet werden.</p>
+</div>
+<div id="offerten-der-architekten" class="section level2">
+<h2>Offerten der Architekten</h2>
+<p>In Anlehnung an DIN 13080 sollte Gliederung des Krankenhauses in Funktionsbereiche und Funktionsstellen im Raumprogramm erkennbar sein. Als unternehmensinternes Dokument, aber auch in der Zusammenarbeit mit externen Architekten, bleibt weiterhin das Arbeiten mit Excel Dateien beliebt.</p>
+<div class="figure"><span id="fig:fig-3"></span>
+<img src="raumprogramm.png" alt="Auszug aus einem Raumprogramm nach DIN" width="100%" />
+<p class="caption">
+Figure 3: Auszug aus einem Raumprogramm nach DIN
+</p>
+</div>
+<p>Jede Bauetappe ist unterteilt in logische Einheiten mit zusammengehörenden Räumen, die auf einem Blatt abgebildet sind. Darauf sind Vorgaben des Unternehmens und später die Angaben der Architekten ersichtlich. Abweichungen zwischen SOLL und IST bleibt auf jedem Blatt gut erkennbar und auch in den Zusammenfassungen. Dadurch ist auch ein Vergleichen der Offerten der Architekten sichergestellt.</p>
+<div class="tabCont">
+<table>
+<colgroup>
+<col width="8%" />
+<col width="16%" />
+<col width="15%" />
+<col width="10%" />
+<col width="12%" />
+<col width="14%" />
+<col width="11%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Blatt-Nr</th>
+<th>FB</th>
+<th>FS</th>
+<th>TS</th>
+<th align="right">SOLL-fläche</th>
+<th align="right"><em>Architekt <code>XY</code></em></th>
+<th align="right">Diff.</th>
+<th align="right">Tol.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>01</td>
+<td>Diagnostik und Therapie</td>
+<td>Notfallaufnahme</td>
+<td>Interdisziplinäre Notaufnahme</td>
+<td align="right">225</td>
+<td align="right">229</td>
+<td align="right">4</td>
+<td align="right">ok!</td>
+</tr>
+<tr class="even">
+<td>02</td>
+<td>Diagnostik und Therapie</td>
+<td>Ambulatorien</td>
+<td>Interdisziplinäre Ambulatorien</td>
+<td align="right">325</td>
+<td align="right">319</td>
+<td align="right">-6</td>
+<td align="right">ok!</td>
+</tr>
+<tr class="odd">
+<td>03</td>
+<td>Diagnostik und Therapie</td>
+<td>Ambulatorien</td>
+<td>Amb. Geburtshilfe / Gynäkologie</td>
+<td align="right">166</td>
+<td align="right">165</td>
+<td align="right">-1</td>
+<td align="right">ok!</td>
+</tr>
+<tr class="even">
+<td>04</td>
+<td>Diagnostik und Therapie</td>
+<td>Arztdienst</td>
+<td>Arztbüros</td>
+<td align="right">390</td>
+<td align="right">400</td>
+<td align="right">10</td>
+<td align="right"><strong>NOT</strong></td>
+</tr>
+<tr class="odd">
+<td>05</td>
+<td>…</td>
+<td></td>
+<td></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Dabei ist hilfreich im Raumprogramm mit dynamischen Links zu arbeiten, was Excel modular und flexibel anwendbar macht. Dynamische Links lassen es zu, dass Blätter zwischen Excel-Dokumenten austauschbar bleiben (weil feste Zellen-Verknüpfungen nur innerhalb eines Blattes bestehen). Die Flexibilität zu behalten ist in der Bauplanung wegen den vielen Versionen und Etappen enorm wichtig. Allerdings sollten sie einen leistungsstarken Computer benutzen, denn dynamische Links kostet Performance.</p>
+<p>Dadurch wird ein Austauschen der Referenzliste möglich gemacht. Auch lässt sich eine neue Version erstellen, indem einige Blätter aus anderen Versionen kopiert werden. Reihenfolge, Positionsnummer, Differenzen und Zusammenfassungen rechnet Excel immer wieder neu. Für die nächste Bauetappe werden einfach Blätter ergänzt oder ersetzt und die aktuellste Referenzliste eingefügt.</p>
+</div>
