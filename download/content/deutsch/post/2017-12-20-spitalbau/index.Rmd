@@ -24,7 +24,6 @@ imageCreditLink: 'https://unsplash.com/@sunburned_surveyor'
 imageSrc: 'Unsplash'
 imageSrcLink: 'https://unsplash.com'
 type: ''
-draft: false
 ---
 
 ```{r setup, include=FALSE}
@@ -72,8 +71,9 @@ Etwas aufwändig aber sehr wirkungsvoll ist, wenn jeder erbrachten Leistung Räu
 
 Um mit standardisierten Räumen auch bei einem Ersatzneubau in Etappen Erfolg zu haben, ist vorab an jede nächste Etappe zudenken. Das Unternehmen will beispielsweise zwei standardisierte Wartezimmergrössen in der Neubauplanung haben, doch für das Bestimmen der Flächen sind alle Etappen zu berücksichtigen.
 
-```{r fig-2, echo=F, out.width=c('100%'), fig.show='hold', fig.cap='Häufigkeiten der Raumbenutzung'}
-knitr::include_graphics("raumpfad.png", error = F)
+```{r fig-2, echo=F, out.width=c('30%','70%'), fig.show='hold', fig.cap='Häufigkeiten der Raumbenutzung'}
+knitr::include_graphics("processmap.png", error = F)
+knitr::include_graphics("frequenttraces.png", error = F)
 ```
 
 Die vielen Daten lassen sich zu Prozessen verknüpfen und visualisieren. Beispielsweise zeigt eine Raumpfadanalyse die Häufigkeiten über Kombinationen der Raumbenutzung. Daraus ergeben sich Hinweise zur optimalen Distanz zwischen den Räumen. Auch zur Frage nach der Anzahl und ob grundsätzlich multifunktionale Räumen vermehrt gebaut werden sollten. Für Prozessanalysen und Visualisierungen sollte eine Statistiksoftware wie [R](https://www.r-project.org) verwendet werden.
