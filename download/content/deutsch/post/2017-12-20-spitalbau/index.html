@@ -24,7 +24,6 @@ imageCreditLink: 'https://unsplash.com/@sunburned_surveyor'
 imageSrc: 'Unsplash'
 imageSrcLink: 'https://unsplash.com'
 type: ''
-draft: false
 ---
 
 
@@ -65,12 +64,12 @@ Figure 1: Auszug aus einer Machbarkeitsstudie
 <p>Etwas aufwändig aber sehr wirkungsvoll ist, wenn jeder erbrachten Leistung Räume und wichtige Infrastrukturen zugeteilt werden. Teilweise ist auch Personal aus mehreren Fachabteilungen für eine Leistung zwingend (Einsatzplan, Raumbelegungen usw.). Daraus kann sich eine recht komplexe Struktur ergeben, wobei die IST-Situation mit Hinblick auf den Neubau zu überdenken ist.</p>
 <p>Um mit standardisierten Räumen auch bei einem Ersatzneubau in Etappen Erfolg zu haben, ist vorab an jede nächste Etappe zudenken. Das Unternehmen will beispielsweise zwei standardisierte Wartezimmergrössen in der Neubauplanung haben, doch für das Bestimmen der Flächen sind alle Etappen zu berücksichtigen.</p>
 <div class="figure"><span id="fig:fig-2"></span>
-<img src="processmap.png" alt="Häufigkeiten der Raumbenutzung" width="30%" /><img src="frequenttraces.png" alt="Häufigkeiten der Raumbenutzung" width="70%" />
+<img src="processmap.png" alt="Aktivitäten Flowchart und Pfadanalyse " width="30%" /><img src="frequenttraces.png" alt="Aktivitäten Flowchart und Pfadanalyse " width="70%" />
 <p class="caption">
-Figure 2: Häufigkeiten der Raumbenutzung
+Figure 2: Aktivitäten Flowchart und Pfadanalyse
 </p>
 </div>
-<p>Die vielen Daten lassen sich zu Prozessen verknüpfen und visualisieren. Beispielsweise zeigt eine Raumpfadanalyse die Häufigkeiten über Kombinationen der Raumbenutzung. Daraus ergeben sich Hinweise zur optimalen Distanz zwischen den Räumen. Auch zur Frage nach der Anzahl und ob grundsätzlich multifunktionale Räumen vermehrt gebaut werden sollten. Für Prozessanalysen und Visualisierungen sollte eine Statistiksoftware wie <a href="https://www.r-project.org">R</a> verwendet werden.</p>
+<p>Die vielen Daten lassen sich zu Prozessen verknüpfen und visualisieren. Teilweise können Räume über Aktivitäten abgeleitet werden. So gibt beispielsweise eine Raumpfadanalyse Aufschluss über Häufigkeiten der Raumkombinationen. Daraus lassen sich Hinweise zur Berechnung der optimalen Distanz zwischen den Räumen ableiten. Auch zur Frage nach der Anzahl, Verteilung und ob grundsätzlich multifunktionale Räumen vermehrt gebaut werden sollten. Für Prozessanalysen und Visualisierungen ist eine Statistiksoftware wie <a href="https://www.r-project.org">R</a> hilfreich.</p>
 </div>
 <div id="offerten-der-architekten" class="section level2">
 <h2>Offerten der Architekten</h2>
@@ -142,10 +141,10 @@ Figure 3: Auszug aus einem Raumprogramm nach DIN
 <td>Diagnostik und Therapie</td>
 <td>Arztdienst</td>
 <td>Arztbüros</td>
-<td align="right">390</td>
-<td align="right">400</td>
-<td align="right">10</td>
-<td align="right"><strong>NOT</strong></td>
+<td align="right">270</td>
+<td align="right">300</td>
+<td align="right">+30</td>
+<td align="right"><strong>!?!</strong></td>
 </tr>
 <tr class="odd">
 <td>05</td>
@@ -160,6 +159,6 @@ Figure 3: Auszug aus einem Raumprogramm nach DIN
 </tbody>
 </table>
 </div>
-<p>Dabei ist hilfreich im Raumprogramm mit dynamischen Links zu arbeiten, was Excel modular und flexibel anwendbar macht. Dynamische Links lassen es zu, dass Blätter zwischen Excel-Dokumenten austauschbar bleiben (weil feste Zellen-Verknüpfungen nur innerhalb eines Blattes bestehen). Die Flexibilität zu behalten ist in der Bauplanung wegen den vielen Versionen und Etappen enorm wichtig. Allerdings sollten sie einen leistungsstarken Computer benutzen, denn dynamische Links kostet Performance.</p>
-<p>Dadurch wird ein Austauschen der Referenzliste möglich gemacht. Auch lässt sich eine neue Version erstellen, indem einige Blätter aus anderen Versionen kopiert werden. Reihenfolge, Positionsnummer, Differenzen und Zusammenfassungen rechnet Excel immer wieder neu. Für die nächste Bauetappe werden einfach Blätter ergänzt oder ersetzt und die aktuellste Referenzliste eingefügt.</p>
+<p>Dabei ist hilfreich im Raumprogramm mit dynamischen Links zu arbeiten, was Excel modular und flexibel anwendbar macht. Dynamische Links lassen es zu, dass Blätter zwischen Excel-Dokumenten austauschbar bleiben (weil feste Zellen-Verknüpfungen nur innerhalb eines Blattes bestehen). Die <strong>Flexibilität</strong> zu <strong>behalten</strong> um in nützlicher Zeit agieren zu können, ist in der Bauplanung wegen den vielen Versionen und Etappen enorm wichtig. Allerdings sollten sie einen leistungsstarken Computer benutzen, denn dynamische Links kostet Performance.</p>
+<p>Somit wird ein Austauschen der Referenzliste erst möglich gemacht. Auch lässt sich eine neue Version erstellen, indem einige Blätter aus anderen Versionen kopiert werden. Reihenfolge, Positionsnummer, Differenzen und Zusammenfassungen rechnet Excel immer wieder neu. Für die nächste Bauetappe werden einfach Blätter ergänzt oder ersetzt und die aktuellste Referenzliste eingefügt. Daraus entstehen einige Excel-Dateien, denen eine sinnvolle Bezeichnung zu geben ist, um später beim Suchen erfolgreich zu bleiben.</p>
 </div>

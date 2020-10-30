@@ -71,12 +71,12 @@ Etwas aufwändig aber sehr wirkungsvoll ist, wenn jeder erbrachten Leistung Räu
 
 Um mit standardisierten Räumen auch bei einem Ersatzneubau in Etappen Erfolg zu haben, ist vorab an jede nächste Etappe zudenken. Das Unternehmen will beispielsweise zwei standardisierte Wartezimmergrössen in der Neubauplanung haben, doch für das Bestimmen der Flächen sind alle Etappen zu berücksichtigen.
 
-```{r fig-2, echo=F, out.width=c('30%','70%'), fig.show='hold', fig.cap='Häufigkeiten der Raumbenutzung'}
+```{r fig-2, echo=F, out.width=c('30%','70%'), fig.show='hold', fig.cap='Aktivitäten Flowchart und Pfadanalyse '}
 knitr::include_graphics("processmap.png", error = F)
 knitr::include_graphics("frequenttraces.png", error = F)
 ```
 
-Die vielen Daten lassen sich zu Prozessen verknüpfen und visualisieren. Beispielsweise zeigt eine Raumpfadanalyse die Häufigkeiten über Kombinationen der Raumbenutzung. Daraus ergeben sich Hinweise zur optimalen Distanz zwischen den Räumen. Auch zur Frage nach der Anzahl und ob grundsätzlich multifunktionale Räumen vermehrt gebaut werden sollten. Für Prozessanalysen und Visualisierungen sollte eine Statistiksoftware wie [R](https://www.r-project.org) verwendet werden.
+Die vielen Daten lassen sich zu Prozessen verknüpfen und visualisieren. Teilweise können Räume über Aktivitäten abgeleitet werden. So gibt beispielsweise eine Raumpfadanalyse Aufschluss über Häufigkeiten der Raumkombinationen. Daraus lassen sich Hinweise zur Berechnung der optimalen Distanz zwischen den Räumen ableiten. Auch zur Frage nach der Anzahl, Verteilung und ob grundsätzlich multifunktionale Räumen vermehrt gebaut werden sollten. Für Prozessanalysen und Visualisierungen ist eine Statistiksoftware wie [R](https://www.r-project.org) hilfreich.
 
 Offerten der Architekten
 ----------------------------
@@ -96,14 +96,13 @@ Blatt-Nr|FB|FS|TS|SOLL-fläche|*Architekt `XY`*|Diff.|Tol.|
 01      |Diagnostik und Therapie|Notfallaufnahme|Interdisziplinäre Notaufnahme|225|229|4|ok!|
 02      |Diagnostik und Therapie|Ambulatorien|Interdisziplinäre Ambulatorien|325|319|-6|ok!|
 03      |Diagnostik und Therapie|Ambulatorien|Amb. Geburtshilfe / Gynäkologie|166|165|-1|ok!|
-04      |Diagnostik und Therapie|Arztdienst|Arztbüros|390|400|10|**NOT**|
+04      |Diagnostik und Therapie|Arztdienst|Arztbüros|270|300|+30|**!?!**|
 05      |...|
 </div>
 
 
-Dabei ist hilfreich im Raumprogramm mit dynamischen Links zu arbeiten, was Excel modular und flexibel anwendbar macht. Dynamische Links lassen es zu, dass Blätter zwischen Excel-Dokumenten austauschbar bleiben (weil feste Zellen-Verknüpfungen nur innerhalb eines Blattes bestehen). Die Flexibilität zu behalten ist in der Bauplanung wegen den vielen Versionen und Etappen enorm wichtig. Allerdings sollten sie einen leistungsstarken Computer benutzen, denn dynamische Links kostet Performance.
+Dabei ist hilfreich im Raumprogramm mit dynamischen Links zu arbeiten, was Excel modular und flexibel anwendbar macht. Dynamische Links lassen es zu, dass Blätter zwischen Excel-Dokumenten austauschbar bleiben (weil feste Zellen-Verknüpfungen nur innerhalb eines Blattes bestehen). Die **Flexibilität** zu **behalten** um in nützlicher Zeit agieren zu können, ist in der Bauplanung wegen den vielen Versionen und Etappen enorm wichtig. Allerdings sollten sie einen leistungsstarken Computer benutzen, denn dynamische Links kostet Performance.
 
 
-Dadurch wird ein Austauschen der Referenzliste möglich gemacht. Auch lässt sich eine neue Version erstellen, indem einige Blätter aus anderen Versionen kopiert werden. Reihenfolge, Positionsnummer, Differenzen und Zusammenfassungen rechnet Excel immer wieder neu. Für die nächste Bauetappe werden einfach Blätter ergänzt oder ersetzt und die aktuellste Referenzliste eingefügt.
-
+Somit wird ein Austauschen der Referenzliste erst möglich gemacht. Auch lässt sich eine neue Version erstellen, indem einige Blätter aus anderen Versionen kopiert werden. Reihenfolge, Positionsnummer, Differenzen und Zusammenfassungen rechnet Excel immer wieder neu. Für die nächste Bauetappe werden einfach Blätter ergänzt oder ersetzt und die aktuellste Referenzliste eingefügt. Daraus entstehen einige Excel-Dateien, denen eine sinnvolle Bezeichnung zu geben ist, um später beim Suchen erfolgreich zu bleiben.
 
