@@ -1,5 +1,5 @@
 baseurl = "https://web007.netlify.app/"
-languageCode = "de"
+defaultContentLanguage = "de"
 title = "A puntaminar portfolio & blog"
 theme = "data-science"
 googleAnalytics = ""
@@ -62,7 +62,7 @@ defaultContentLanguageInSubdir = true
   [languages.de]
     languageName = "Deutsch"
     languageNameShort = "de"
-    languageFlag = "🇩🇪"
+    languageFlag = "🇨🇭🇱🇺🇱🇮🇩🇪🇧🇪🇦🇹"
     contentDir = "content/deutsch"
     weight = 1
     [languages.de.params]
@@ -71,7 +71,7 @@ defaultContentLanguageInSubdir = true
   [languages.en]
     languageName = "English"
     languageNameShort = "en"
-    languageFlag = "🇬🇧"
+    languageFlag = "🇺🇸🇬🇧🇮🇪🇨🇦🇦🇺🇳🇿"
     contentDir = "content/english"
     weight = 2
     [languages.en.params]
