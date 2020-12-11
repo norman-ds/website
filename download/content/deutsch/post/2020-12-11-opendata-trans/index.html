@@ -1,0 +1,102 @@
+---
+title: Mehr Transparenz mit Open Data
+writers: 
+  - owner: "Norman Bieri"
+    twitter: "bierinorman"
+    photo: "https://pbs.twimg.com/profile_images/1301085742064599041/QgufA9ab_400x400.jpg"
+date: '2020-12-11'
+slug: opendata-trans
+categories:
+  - Project
+tags:
+  - r
+  - docker
+  - github
+  - gitlab
+  - api
+editor_options:
+  chunk_output_type: console
+buttons:
+  - link: 'https://norman-ds.github.io/momo/'
+    text: Interaktiv Monitoring
+  - link: 'https://norman-ds.gitlab.io/report-momo/'
+    text: Report
+description: 'Mit Microservices nachhaltig mehr Transparenz im Geschäftsalltag erreichen.'
+thumbnail: 'thumbnail.jpg'
+image: 'windyfacade.jpg'
+imageAlt: 'Fassade aus vielen Platten, die sich mit dem Wind bewegen.'
+imageCredit: 'Technorama'
+imageCreditLink: 'https://www.technorama.ch/de/ueber-uns/medienarchiv-und-downloads'
+imageSrc: ' Swiss Science Center'
+imageSrcLink: 'https://www.technorama.ch/de/ueber-uns/medienarchiv-und-downloads'
+type: ''
+draft: FALSE
+---
+
+
+
+<ul>
+<li><a href="#einleitung">Einleitung</a></li>
+<li><a href="#software-architektur">Software Architektur</a></li>
+<li><a href="#beispiel-mortalitätsmonitoring">Beispiel: Mortalitätsmonitoring</a></li>
+</ul>
+<div id="einleitung" class="section level2">
+<h2>Einleitung</h2>
+<p>Um eine Datenquelle für ein Projekt verwenden können, ist ein Überblick für die grobe Einordnung zwingend.
+Nichts ärgerlicher als mit viel Aufwand erfahren müssen, dass in den Daten die gesuchten Informationen fehlen. Noch ärgerlicher wäre unter Zeitdruck nicht zu realisieren, dass die gesuchten Informationen vorhanden wären.</p>
+<p>Ein <code>Microservice</code> hat nur eine Aufgabe — er stellt ein Überblick der Datenquelle zu Verfügung. Das kann eine Tabelle, Metadaten oder eine Beschreibung sein. Einige Anwender bevorzugen Grafiken, Charts oder Dashboards. Zudem ist ein Interface zur Datenquelle zwingend (<code>RESTfull</code> Service).</p>
+<p>Halten Sie die Microservice (MS) simpel und RESTfull, dann können Sie für komplexe Projekte viele MS aneinander koppeln. In Ihrem nächsten Projekt verwenden Sie bestehende MS wieder und ergänzen sie mit neuen. Zudem bauen sie damit gleich die Basis für ihre Dokumentation (beispielsweise können sie mit Hilfe von <a href="https://bookdown.org">Bookdown</a> ihre Überlegungen zu den Daten beschreiben).</p>
+<p>Das Vorgehen mit Microservice ist nachhaltig, weil Sie auch später nachvollziehen können, wie die Daten zustande gekommen sind.</p>
+</div>
+<div id="software-architektur" class="section level2">
+<h2>Software Architektur</h2>
+<p>Schlussendlich ist der <code>Microservice</code> ein einfacher Webserver auf den via URL zugegriffen werden kann.
+Wenn immer möglich werden statische Webseiten verwendet. Für das Rendern statischer Webseiten existieren heute schnelle Programme, wie
+<a href="https://gohugo.io"><img src="/svg/hugo-logo-wide.svg" alt="Link Hugo Webseite" style="width:15.0%" /></a>.
+Falls Sie eine Datenquelle benutzen, die periodisch aktualisiert wird, benötigen Sie einen Server auf dem periodisch die Datenquelle abgefragt, überprüft und den eigenen Microservice aktualisiert. Dafür und für vieles mehr stellt beispielsweise
+<a href="https://github.com"><img src="/svg/github.svg" alt="Link Github Webseite" style="width:5.0%" />GitHub</a>
+oder
+<a href="https://gitlab.com"><img src="/svg/gitlab-logo-gray-rgb.svg" alt="Link Gitlab Webseite" style="width:15.0%" /></a>
+ihren CI/CD Service zur Verfügung.</p>
+<p><a href="https://www.r-project.org"><img src="/svg/Rlogo.svg" alt="Link R-Projekt Webseite" style="width:10.0%" /></a>
+ist <code>Opensource</code> Statistiksoftware und bietet eine geeignete Entwicklungsumgebung für alles, was mit Daten zu tun hat. Enthalten ist auch <a href="https://rmarkdown.rstudio.com">R Markdown</a>, womit Webseiten erstellt werden können.</p>
+<p>Jeder Microservice ist unabhängig und wird einzig über seine <code>REST</code> Schnittstelle definiert. Um die Entwicklungsumgebung auch unabhängig zu halten, eignet sich
+<a href="https://www.docker.com"><img src="/svg/docker-official.svg" alt="Link Docker Webseite" style="width:10.0%" /></a>
+und für R-Projekte im Speziellen <a href="https://www.rocker-project.org">Rocker</a>.</p>
+</div>
+<div id="beispiel-mortalitätsmonitoring" class="section level2">
+<h2>Beispiel: Mortalitätsmonitoring</h2>
+<p>Das Mortalitätsmonitoring (MOMO) überwacht die wöchentliche Anzahl Todesfälle in der Schweiz.
+Die Todesfälle werden täglich den Zivilstandsämtern gemeldet und dem
+<a href="https://www.bfs.admin.ch/bfs/de/home/statistiken/bevoelkerung/geburten-todesfaelle/todesfaelle.html">Bundesamt für Statistik</a>
+im Rahmen der Statistik der natürlichen Bevölkerungsbewegung (BEVNAT) mitgeteilt.
+Der Melde- und Verarbeitungsprozess dauert in der Regel neun Tage.</p>
+<p>Seit zwanzig Jahren werden in der Schweiz wöchentlich die Todesfälle erhoben und die <code>Opendata</code> stehen im Web zur Verfügung. Das Bundesamt stellte Ende April, nach den COVID19 Meldungen aus dem Tessin, folgende Grafik ins Internet.</p>
+</br>
+<center>
+<a href="https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit/gesundheitszustand/sterblichkeit-todesursachen.html"><img src="gd-d-14.03.04.03-wr-computed_thumbnail.png" alt="Todesfälle in der Schweiz 2020, Übersterblichkeit im April" width="540" /></a>
+</center>
+<blockquote>
+<p>Die Grafik oben zeigt eine massive Übersterblichkeit im April 2020. Jedoch ist sie weder neutral noch transparent und ist vielleicht für mein Projekt mehr irreleitend als hilfreich.</p>
+</blockquote>
+</div>
+<div id="micorservice-1" class="section level1">
+<h1>Micorservice 1</h1>
+<p>Ein eigener Service, der die aktuellen Daten in Relation zu anderen Jahren und für spezifische Regionen zeigt, könnte für mein Projekt hilfreicher sein.</p>
+<center>
+<a href="https://norman-ds.github.io/momo/"><img src="zeitreihe.png" alt="Todesfälle in der Schweiz, Zeitreihe mehrere Jahre" width="540" /></a>
+</center>
+<p>Das <a href="https://norman-ds.github.io/momo/">Mortalitäsmonitoring</a> läuft auf
+<a href="https://github.com"><img src="/svg/github.svg" alt="Link Github Webseite" style="width:5.0%" />GitHub</a>
+und zeigt grafisch eine Zeitreihe für die ganze Schweiz sowie ausgewählte Kantone. Das interaktive Widget mit <a href="https://dygraphs.com">dygraphs</a> ermöglicht ein Drill-Down in die Zeitreihe. Mehrere <em>Tabs</em> ermöglichen einige Zusatzinformationen zur Datenquelle anzuzeigen und die <code>REST</code>-Schnittstelle wird im <em>json</em> Format angeboten. Weil die Webseite einfach gehalten ist, wird für das Rendern <a href="https://rmarkdown.rstudio.com">R Markdown</a> mit <a href="https://pandoc.org">Pandoc</a> verwendet.</p>
+</div>
+<div id="micorservice-2" class="section level1">
+<h1>Micorservice 2</h1>
+<p>Auf diesem <code>Microservice</code> können weitere aufbauen, beispielsweise ein <a href="https://norman-ds.gitlab.io/report-momo/">Reporting</a>. Als Beispiel wurde hier, unabhängig und ein ganz eigenes System, das Reporting auf
+<a href="https://gitlab.com"><img src="/svg/gitlab-logo-gray-rgb.svg" alt="Link Gitlab Webseite" style="width:15.0%" /></a>
+aufgebaut.</p>
+<center>
+<a href="https://norman-ds.gitlab.io/report-momo/"><img src="report.png" alt="Auszug aus Report zu regionale Unterschiede" width="540" /></a>
+</center>
+<p>Da das Mortalitätsmonitoring ausschliesslich <code>Opendata</code> benutzt, wurde dafür kostenlose Software eingesetzt. So stehen Ihnen Webserver zur Verfügung, für die ihre IT-Abteilung keinen Unterhalt betreiben muss. Sie können später entscheiden, wie viel Kosten sie für Sicherheit aufwenden wollen.</p>
+</div>
