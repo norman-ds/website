@@ -1,3 +1,4 @@
+#baseurl = "/"
 baseurl = "https://web007.netlify.app/"
 defaultContentLanguage = "de"
 title = "A puntaminar portfolio & blog"
