@@ -31,8 +31,9 @@ imageCreditLink: 'https://unsplash.com/@thetonik_co'
 imageSrc: 'Unsplash'
 imageSrcLink: 'https://unsplash.com'
 type: ''
-draft: TRUE
+draft: true
 ---
+
 
 -   [Einleitung](#einleitung)
 -   [Drei Altersgruppen](#drei-altersgruppen)

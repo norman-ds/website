@@ -29,7 +29,7 @@ imageCreditLink: 'https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit.ht
 imageSrc: 'BFS'
 imageSrcLink: 'https://www.bfs.admin.ch/bfs/de/home/statistiken/gesundheit/gesundheitszustand/sterblichkeit-todesursachen.html'
 type: ''
-draft: TRUE
+draft: true
 ---
 
 -   [Einleitung](#einleitung)
