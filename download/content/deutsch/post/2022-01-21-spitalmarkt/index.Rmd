@@ -1,5 +1,5 @@
 ---
-title: Spitalmarkt
+title: Potenzial im Spitalmarkt
 writers: 
   - owner: "Norman Bieri"
     twitter: "bierinorman"
@@ -26,17 +26,23 @@ imageSrcLink: 'https://stock.adobe.com'
 type: ''
 ---
 
-Für die Strategieentwicklung Chancen und Gefahren in Deinem stationären Markt prüfen.
+Für die Strategieentwicklung Chancen und Gefahren im stationären Markt prüfen. 
+Wettbewerb wirkt, wo viele Patienten eine reale Spitalwahl haben.
 
-Du bestimmst die Fokusbereiche und ich benutze nationale Daten um 
-bis auf Gemeinde-Ebene die Zubringer zu vergleichen.
+Spitäler haben ein **Einzugsgebiet** oder vielleicht unterschiedliche je nach Leistungsbereich. 
+Auf Basis der PLZ und Medstat Regionen lassen sich häufig auf Gemeindeebene Marktdaten mit nationalen Daten abbilden.
 
-Dein Fokus sind Deine Ziele, Dein Markt, Deine Leistungen, Dein Einzugsgebiet, Deine Altersgruppe, Deine Zubringer, …
+Jedes Spital kennt seine **Fokusbereiche**, die sie für ihre Strategieentscheidung überprüft haben will. Dafür werden Filter zu Alter und Leistungen bis auf einzelne Diagnosen und Behandlungen angewendet.
 
-Ich übernehme für Dich die Beschaffung der nationalen Daten und das ganze Datenmanagement. Damit habe ich Erfahrung seit 2010.
+Viele Patienten werden durch niedergelassene Ärzte zugewiesen und viele suchen direkt die Notfallstation auf. Daher ist es wichtig, das Verhalten der **Zuweiser** zu kennen, um ein Zuweisermarketing zu führen.
 
-Für Dein Unternehmen bekommst Du Tabellen, Grafiken, Animationen, Präsentationen.
+Um den Trend im Markt beurteilen zu können, werden alle nationalen Daten mit den im eigenen Haus erbrachten Leistungen über drei Jahre nach Regionen abgebildet.
+Der **Marktanteil und vorhandenes Potenzial** werden dann als Kennzahlen dargestellt.
+Damit könnte sich beispielsweise zeigen, dass Ihre Klinik Fälle auf dem Notfall gewinnt,
+jedoch elektive Behandlungen verliert oder zunehmend ambulant erbracht werden.
 
-Der Schlussbericht ergänzt die interne Analyse für Deine strategische Planung (SWOT).
+Ich übernehme die **Beschaffung** der nationalen Daten und das ganze Datenmanagement für Ihr Spital. Damit habe ich Erfahrung seit über zehn Jahren.
 
-Schlussbesprechung der Ergebnisse.
+Die Resultate stehen in Tabellen, Karten, Grafiken, Animationen, Präsentationen in PDF  oder HTML zur Verfügung. 
+Zusammen mit der internen Analyse erhalten Sie die Basis für Ihre strategische Planung (**SWOT**).
+
